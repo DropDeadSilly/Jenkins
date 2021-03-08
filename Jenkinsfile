@@ -6,5 +6,11 @@ pipeline {
         sh 'echo Hi Vasant!!!'
       }
     }
+
+    stage('Like') {
+          steps {
+            sh 'echo You like anime.'
+          }
+        }
   }
 }
