@@ -11,7 +11,7 @@ pipeline {
 
   stage('Like') {
       steps {
-        sh 'echo You like anime.'
+        sh 'hostname'
       }
     }
   }
