@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'SHELL'
+  }
   stages {
     stage('Hello') {
       steps {
@@ -7,10 +9,10 @@ pipeline {
       }
     }
 
-    stage('Like') {
-          steps {
-            sh 'echo You like anime.'
-          }
-        }
+  stage('Like') {
+      steps {
+        sh 'echo You like anime.'
+      }
+    }
   }
 }
