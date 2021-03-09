@@ -19,6 +19,7 @@ pipeline {
       steps {
         sh 'hostname'
         sh 'node --version'
+        echo "Hello, ${PERSON}, nice to meet you."
       }
     }
   }
