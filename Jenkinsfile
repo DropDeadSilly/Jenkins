@@ -1,17 +1,21 @@
 pipeline {
   agent any
+
+  environment {
+    Abc = "Vasant Kumar"
+  }
+
   stages {
+
     stage('Hello') {
       steps {
-        sh 'echo Hi Vasant!!!'
-        mail bcc: '', body: 'Test from Jenkins', cc: '', from: '', replyTo: '', subject: 'Test from Jenkins', to: 'kailesh5kumar@gmail.com'
+        sh 'echo ${Abc}!!!'
       }
     }
 
-  stage('Like') {
+    stage('Like') {
       steps {
         sh 'hostname'
-        emailext body: 'Test from Jenkins', subject: 'Test from Jenkins', to: 'kailesh5kumar@gmail.com'
       }
     }
   }
