@@ -22,7 +22,7 @@ pipeline {
 
   post {
     always {
-      slackSend channel: '#jenkins-alerts', message: 'Cool, Slack messages working fine!'
+      slackSend channel: '#jenkins-alerts', message: "Hi, {Abc}!
     }
   }
 }
