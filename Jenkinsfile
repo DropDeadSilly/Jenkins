@@ -10,6 +10,7 @@ pipeline {
     stage('Tool') {
       steps {
         sh 'hostname'
+        sh 'node --version'
       }
     }
   }
