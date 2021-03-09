@@ -9,6 +9,11 @@ pipeline {
 
     stage('Tool') {
       steps {
+      input {
+        message "Should we continue?"
+        ok "Yes, we should."
+        submitter "admin"
+      }
         sh 'hostname'
         sh 'node --version'
       }
